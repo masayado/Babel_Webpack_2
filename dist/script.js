@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var saludo = 'Hola mundo con webpack saludo3';\nconsole.log(saludo);\nvar saludar = 'Hola a todos';\nalert(saludar);\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const saludo = 'Hola mundo con webpack saludo3';\r\nconsole.log(saludo);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

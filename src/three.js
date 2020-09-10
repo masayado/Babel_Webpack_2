@@ -1,0 +1,2 @@
+import resultOne from "./one";
+
