@@ -90,10 +90,47 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("const saludo = 'Hola mundo con webpack saludo3';\r\nconsole.log(saludo);\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./three */ \"./src/three.js\");\n\nconsole.log(Object(_three__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/one.js":
+/*!********************!*\
+  !*** ./src/one.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return resultOne; });\nvar numeros_arr = [1, 4, 23, -4, 'one', 6, 0, 1.1, 3.1415]; //array de ejemplo\n\nfunction resultOne() {\n  var multiplicacion = numeros_arr.map(function (element) {\n    return element * 4; //se retorna element y se multiplica x 4\n  });\n  console.log(multiplicacion);\n  var filtrar = multiplicacion.filter(function (mayoraocho) {\n    return mayoraocho > 8; //se filtran aquellos elementos mayores a 8\n  });\n  console.log(filtrar);\n  return filtrar;\n}\n;\n\n//# sourceURL=webpack:///./src/one.js?");
+
+/***/ }),
+
+/***/ "./src/three.js":
+/*!**********************!*\
+  !*** ./src/three.js ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return three; });\n/* harmony import */ var _one__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./one */ \"./src/one.js\");\n/* harmony import */ var _two__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./two */ \"./src/two.js\");\n\n\nfunction three() {\n  //funcion para invocar funciones presentes en one and two\n  return {\n    \"status\": \"OK\",\n    \"one\": Object(_one__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(),\n    \"two\": Object(_two__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n  };\n}\n;\n\n//# sourceURL=webpack:///./src/three.js?");
+
+/***/ }),
+
+/***/ "./src/two.js":
+/*!********************!*\
+  !*** ./src/two.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return resultTwo; });\nfunction resultTwo() {\n  return objJson();\n}\n;\n\nfunction objJson() {\n  var obj = {\n    name: \"John\",\n    age: 30,\n    city: \"New York\"\n  }; //objeto\n\n  console.log(obj);\n  var myJSON = JSON.stringify(obj); //convertir Json a string\n\n  return myJSON;\n}\n\n;\n\n//# sourceURL=webpack:///./src/two.js?");
 
 /***/ })
 

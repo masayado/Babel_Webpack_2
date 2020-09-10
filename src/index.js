@@ -1,2 +1,3 @@
-const saludo = 'Hola mundo con webpack saludo3';
-console.log(saludo);
+import three from "./three";
+
+console.log(three());
